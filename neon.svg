@@ -40,9 +40,8 @@
             }
         </style>
     </defs>
-    <!-- Creación del rectángulo con borde de neón -->
-    <rect x="0" y="0" width="500" height="150" class="neon-border" />
-    
-    <!-- SVG en línea desde un enlace externo -->
+    <!-- Imagen externa -->
     <image href="https://novatorem-spotify-git-main-jhoel-villcas-projects.vercel.app/api/spotify" x="10" y="8.5" width="480" height="133" />
+    <!-- Borde de neón alrededor de la imagen -->
+    <rect x="10" y="8.5" width="480" height="133" class="neon-border" />
 </svg>
