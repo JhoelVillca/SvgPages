@@ -1,4 +1,6 @@
 <svg width="500" height="150" xmlns="http://www.w3.org/2000/svg">
+    <!-- Imagen externa -->
+    <image href="https://novatorem-spotify-git-main-jhoel-villcas-projects.vercel.app/api/spotify" x="10" y="8.5" width="480" height="133" />
     <!-- Definiciones de gradiente y filtro -->
     <defs>
         <!-- Definición del gradiente lineal de neón -->
@@ -40,8 +42,6 @@
             }
         </style>
     </defs>
-    <!-- Imagen externa -->
-    <image href="https://novatorem-spotify-git-main-jhoel-villcas-projects.vercel.app/api/spotify" x="10" y="8.5" width="480" height="133" />
     <!-- Borde de neón alrededor de la imagen -->
     <rect x="10" y="8.5" width="480" height="133" class="neon-border" />
 </svg>
