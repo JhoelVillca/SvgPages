@@ -1,0 +1,48 @@
+<svg width="500" height="150" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definiciones de gradiente y filtro -->
+    <defs>
+        <!-- Definición del gradiente lineal de neón -->
+        <linearGradient id="neon-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#20BDFF; stop-opacity:1" />
+            <stop offset="25%" style="stop-color:#ab66ff; stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#5433FF; stop-opacity:1" />
+            <stop offset="75%" style="stop-color:#f53803; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#20BDFF; stop-opacity:1" />
+        </linearGradient>
+        <!-- Definición del filtro para el brillo exterior -->
+        <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
+            <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+            <feFlood flood-color="#ffffff" result="color" />
+            <feComposite in2="offsetBlur" operator="in" result="blurOutline" />
+            <feMerge>
+                <feMergeNode in="blurOutline" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <!-- Definición de animaciones -->
+        <style>
+            @keyframes neon-animation {
+                0% { stroke-dashoffset: 0; }
+                100% { stroke-dashoffset: 2000; }
+            }
+            @keyframes flicker {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.3; }
+            }
+            .neon-border {
+                fill: none;
+                stroke: url(#neon-gradient);
+                stroke-width: 8;
+                stroke-dasharray: 500;
+                animation: neon-animation 10s linear infinite, flicker 1s infinite alternate;
+                filter: url(#neon-glow);
+            }
+        </style>
+    </defs>
+    <!-- Creación del rectángulo con borde de neón -->
+    <rect x="0" y="0" width="500" height="150" class="neon-border" />
+    
+    <!-- SVG en línea desde un enlace externo -->
+    <image href="https://novatorem-spotify-git-main-jhoel-villcas-projects.vercel.app/api/spotify" x="10" y="8.5" width="480" height="133" />
+</svg>
